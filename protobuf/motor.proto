@@ -1,0 +1,7 @@
+syntax = "proto3";
+package antikeimena;
+
+message Motor{
+    uint32 speed_left   = 1;
+    uint32 speed_right  = 2;
+}

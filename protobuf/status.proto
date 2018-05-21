@@ -1,0 +1,9 @@
+syntax = "proto3";
+package antikeimena;
+
+message Status {
+   uint32 version       = 1;
+   uint32 uptime        = 2;
+   uint32 sensorInError = 3;
+   uint32 debug         = 4;
+}

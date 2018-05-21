@@ -1,0 +1,19 @@
+syntax = "proto3";
+package antikeimena;
+
+message Sensor{
+    uint32 odometry_left   =  1;
+    uint32 odometry_right  =  2;
+    float  battery_voltage =  3;
+    float  temperature     =  4;
+    uint32 ultrasonic_01   =  5;
+    uint32 ultrasonic_02   =  6;
+    uint32 ultrasonic_03   =  7;
+    uint32 ultrasonic_04   =  8;
+    uint32 ultrasonic_05   =  9;
+    uint32 ultrasonic_06   = 10;
+    uint32 ultrasonic_07   = 11;
+    uint32 ultrasonic_08   = 12;
+    uint32 ultrasonic_09   = 13;
+    uint32 ultrasonic_10   = 14;
+}
