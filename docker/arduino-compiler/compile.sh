@@ -11,7 +11,8 @@ mkdir -p /Glaucus/Main/lib/nanopb
 cd /Sisyphus/protobuf
 for name in config motor sensor status
 do
-    protoc -o ${name}.pb ${name}.proto
+    protoc --python_out=/host ${name}.proto
+    protoc -o ${name}.pb      ${name}.proto
     python /nanopb/generator/nanopb_generator.py ${name}.pb
     mv ${name}.pb.c /Glaucus/Main/lib/nanopb/
     mv ${name}.pb.h /Glaucus/Main/lib/nanopb/
