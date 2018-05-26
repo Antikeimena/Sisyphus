@@ -9,7 +9,7 @@ RUN git clone -b master --single-branch --depth 1 https://github.com/google/prot
 WORKDIR protobuf
 RUN ./autogen.sh
 RUN ./configure
-RUN make
+RUN make -j 9
 #RUN make check
 RUN make install
 RUN ldconfig
@@ -25,7 +25,7 @@ RUN python setup.py install --cpp_implementation
 WORKDIR /
 RUN git clone -b master --single-branch --depth 1 https://github.com/nanopb/nanopb.git
 WORKDIR /nanopb/generator/proto
-RUN make
+RUN make -j 9
 
 # Arduino
 WORKDIR /
