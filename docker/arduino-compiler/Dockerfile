@@ -31,4 +31,9 @@ RUN make -j 9
 WORKDIR /
 RUN pip install -U platformio
 
+ADD compile.sh compile.sh
+RUN chmod 700 compile.sh
+
 WORKDIR /
+
+CMD /compile.sh
