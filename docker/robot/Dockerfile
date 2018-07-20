@@ -21,13 +21,13 @@ RUN python setup.py test    --cpp_implementation
 RUN python setup.py install --cpp_implementation
 
 ADD protobuf/config.proto .
-RUN protoc   config.proto
+RUN protoc --python_out=/ config.proto
 ADD protobuf/motor.proto .
-RUN protoc   motor.proto
+RUN protoc --python_out=/ motor.proto
 ADD protobuf/sensor.proto .
-RUN protoc   sensor.proto
+RUN protoc --python_out=/ sensor.proto
 ADD protobuf/status.proto .
-RUN protoc   status.proto
+RUN protoc --python_out=/ status.proto
 
 
 
@@ -42,6 +42,6 @@ COPY --from=0 status_pb2.py /
 
 # Prepare python part
 ADD python/* /
-RUN pip install -r   requirements.txt
+RUN pip install -r requirements.txt
 
 CMD python -u Robot.py
