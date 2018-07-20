@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:18.10
 
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y autoconf automake libtool curl make g++ unzip mc git vim \
@@ -19,7 +19,6 @@ ENV PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION_VERSION=2
 RUN python setup.py build   --cpp_implementation 
 RUN python setup.py test    --cpp_implementation
 RUN python setup.py install --cpp_implementation
-
 
 # NanoProtobuf
 WORKDIR /
