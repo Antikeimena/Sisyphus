@@ -31,7 +31,10 @@ WORKDIR /
 RUN pip install -U platformio
 
 ADD compile.sh compile.sh
-RUN chmod 700 compile.sh
+RUN chmod 700  compile.sh
+
+ADD build.sh  build.sh
+RUN chmod 700 build.sh
 
 WORKDIR /
 
