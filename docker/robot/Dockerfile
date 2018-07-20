@@ -32,7 +32,7 @@ RUN protoc --python_out=/ status.proto
 
 
 
-FROM python:latest
+FROM resin/raspberrypi3-python:latest
 
 # Copy build artefacts
 COPY --from=0 config_pb2.py /
