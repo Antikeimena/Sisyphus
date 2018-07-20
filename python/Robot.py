@@ -210,7 +210,7 @@ class Robot(threading.Thread):
             if "Sensor" == command.DESCRIPTOR.name:
                 self._robot['odometry_left']   = command.odometry_left
                 self._robot['odometry_right']  = command.odometry_right
-                self._robot['battery_voltage'] = command.battery_voltage
+                self._robot['battery_voltage'] = command.battery_voltage  # 11.8 LOW  14.8 HIGH
                 self._robot['temperature']     = command.temperature
                 self._robot['ultrasonic']      = [command.ultrasonic_01,
                                                   command.ultrasonic_02,
