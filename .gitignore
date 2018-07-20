@@ -1,0 +1,9 @@
+
+# all Probuf files
+*.pb
+
+# python protobuf files
+python/config_pb2.py
+python/motor_pb2.py
+python/sensor_pb2.py
+python/status_pb2.py
