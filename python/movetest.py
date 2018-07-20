@@ -116,9 +116,10 @@ if __name__ == "__main__":
     with serial.Serial('/dev/ttyAMA0', 115200, timeout=10000) as ser:
         speed = 90
         addi  = 1
-        for i in range(420):
+
+        for i in range(900):
             debugData(ser)
-            #sendMotor(ser, speed, speed)
+            sendMotor(ser, speed, speed)
             speed += addi
 
             if speed > 180:
@@ -128,6 +129,7 @@ if __name__ == "__main__":
             if speed < 0:
                 speed = 0
                 addi = 1
-        #sendMotor(ser, 91, 91)
-        #time.sleep(2)
+        
+        sendMotor(ser, 91, 91)
+        time.sleep(1)
         sendMotor(ser, 90, 90)
