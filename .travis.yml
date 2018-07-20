@@ -6,7 +6,8 @@ services:
 language: bash
 
 script:
-  - cp -r python docker/robot
+  - cp -r python   docker/robot
+  - cp -r protobuf docker/robot
   - docker run --rm --privileged multiarch/qemu-user-static:register --reset 
   - docker build -t ansi/antikeimenarobot:latest docker/robot/
   - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
