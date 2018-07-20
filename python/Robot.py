@@ -8,7 +8,7 @@ import config_pb2
 import sensor_pb2
 import status_pb2
 import ConfigParser
-from   struct     import *
+from   struct        import *
 
 
 class ReceiveThread(threading.Thread):
@@ -237,4 +237,3 @@ if __name__ == "__main__":
     #r.debug()
     time.sleep(10)
     print(r._robot)
-

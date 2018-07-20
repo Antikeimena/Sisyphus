@@ -27,3 +27,4 @@ platformio lib update
 platformio run
 
 cp /host/Glaucus/Main/.pioenvs/megaatmega2560/firmware.hex /host/Glaucus/firmware.hex
+                 
