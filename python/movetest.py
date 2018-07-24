@@ -109,7 +109,7 @@ def sendMotor(ser, left, right):
     ser.write(pack('<H', len(message)))
     ser.write(message)
     print (motor)
-    print ("HEXDUMP:" + ' '.join(hex(ord(ime)) for ime in message))
+    #print ("HEXDUMP:" + ' '.join(hex(ord(ime)) for ime in message))
     ser.flush()
 
 if __name__ == "__main__":
@@ -117,7 +117,7 @@ if __name__ == "__main__":
         speed = 90
         addi  = 1
 
-        for i in range(900):
+        for i in range(20):
             debugData(ser)
             sendMotor(ser, speed, speed)
             speed += addi
